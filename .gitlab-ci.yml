@@ -9,6 +9,7 @@ pages:
     - npm install
     - npm run build
     - rm -rf public
+    - cp index.html 404.html
     - mv build public
   artifacts:
     paths:
