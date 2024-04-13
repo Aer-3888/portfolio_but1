@@ -28,7 +28,7 @@ const Home = () => {
             screenPosition = [0, 0, 0]
         } else {
             screenScale = [0.22,0.22,0.22];
-            screenPosition = [0,0,-3]
+            screenPosition = [0,0,-1]
         }
 
         return [screenScale, screenPosition]
@@ -59,7 +59,7 @@ const Home = () => {
                     setCurrentStage={setCurrentStage}
                 />
                 <Character
-                    position={[0,3,-4]}
+                    position={[0,0.2,-2]}
                     scale={[0.1,0.1,0.1]}
                 />
                 <Balloon 
