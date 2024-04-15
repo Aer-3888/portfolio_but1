@@ -11,7 +11,7 @@ const PeachyBalloon = () => {
     })
     
     return (
-        <mesh ref={balloonRef} scale={[0.001,0.001,0.001]} rotation={[1,0,0]}>
+        <mesh ref={balloonRef} scale={[0.0007,0.0007,0.0007]} rotation={[0,0,0]}>
             <primitive object={scene}/>
         </mesh>
     )

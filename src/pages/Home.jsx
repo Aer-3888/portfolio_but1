@@ -7,7 +7,7 @@ import Character from '../models/Character';
 import Balloon from '../models/Balloon';
 import HomeInfo from '../components/HomeInfo';
 import PeachyBalloon from '../models/PeachyBalloon'
- 
+import Door from '../models/Door'
 
 const Home = () => {
     const [currentStage, setCurrentStage] = useState(5);
@@ -30,7 +30,7 @@ const Home = () => {
             screenScale = [0.2, 0.2, 0.2];
             screenPosition = [0, 0, 0]
         } else {
-            screenScale = [0.22,0.22,0.22];
+            screenScale = [0.22,0.2,0.22];
             screenPosition = [0,0,0]
         }
 
@@ -51,7 +51,7 @@ const Home = () => {
                 <directionalLight position={[5,1,1]} intensity={2}/>
                 <ambientLight intensity={0.5} />
                 <hemisphereLight skyColor="#b1e1ff" groudColor="#000000" intensity={1}/>
-                <PeachyBalloon />
+                {/* <PeachyBalloon /> */}
                 <Sky />
                 <Island
                     isRotating={isRotating}
@@ -62,7 +62,7 @@ const Home = () => {
                     rotation={islandRotation}
                 />
                 <Character
-                    position={planePosition}
+                    position={[0,0,0]}
                     scale={[0.13,0.13,0.13]}
 
                 />
