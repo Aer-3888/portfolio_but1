@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from 'react';
 import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader';
-import Island2 from '../models/Island2';
+import Island from '../models/island';
 import { Sky } from '@react-three/drei';
 import Character from '../models/Character';
 import Balloon from '../models/Balloon';
@@ -52,13 +52,13 @@ const Home = () => {
                 <hemisphereLight skyColor="#b1e1ff" groudColor="#000000" intensity={1}/>
                 
                 <Sky />
-                <Island2
-                    position={islandPosition}
-                    scale={islandScale}
-                    rotation={islandRotation}
+                <Island
                     isRotating={isRotating}
                     setIsRotating={setIsRotating}
                     setCurrentStage={setCurrentStage}
+                    position={islandPosition}
+                    scale={islandScale}
+                    rotation={islandRotation}
                 />
                 <Character
                     position={planePosition}
