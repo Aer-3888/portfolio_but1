@@ -1,18 +1,20 @@
 import React, { Suspense, useState } from 'react';
 import {Canvas} from '@react-three/fiber'
 import Loader from '../components/Loader';
-import Island from '../models/island';
-import Sky  from '../models/Sky';
+import Island2 from '../models/Island2';
+import { Sky } from '@react-three/drei';
 import Character from '../models/Character';
 import Balloon from '../models/Balloon';
+import HomeInfo from '../components/HomeInfo';
+ 
 
 const Home = () => {
-    const [currentStage, setCurrentStage] = useState(1);
+    const [currentStage, setCurrentStage] = useState(5);
     const [isRotating, setIsRotating] = useState(false);
     const adjustIslandForScreenSize = () => {
         let screenScale = null; 
         let screenPosition = [0,-6.5, -43];
-        let rotation = [0.1,0.4,0]
+        let rotation = [0.2,0.5,0]
         if(window.innerWidth < 768){
             screenScale = [0.9, 0.9, 0.9];
         } else {
@@ -24,7 +26,7 @@ const Home = () => {
     const adjustPlaneForScreenSize = () => {
         let screenScale, screenPosition ;
         if(window.innerWidth < 768){
-            screenScale = [0.1, 0.1, 0.1];
+            screenScale = [0.2, 0.2, 0.2];
             screenPosition = [0, 0, 0]
         } else {
             screenScale = [0.22,0.22,0.22];
@@ -39,9 +41,9 @@ const Home = () => {
     
     return (
     <section className='w-full h-screen relative'>
-        {/* <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
-            lol
-        </div> */}
+        <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+            {currentStage && <HomeInfo currentStage={currentStage}/>}
+        </div>
 
         <Canvas className= {`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`} camera={{ near : 0.1, far: 1000}}>
             <Suspense fallback={<Loader />}>
@@ -50,7 +52,7 @@ const Home = () => {
                 <hemisphereLight skyColor="#b1e1ff" groudColor="#000000" intensity={1}/>
                 
                 <Sky />
-                <Island
+                <Island2
                     position={islandPosition}
                     scale={islandScale}
                     rotation={islandRotation}
@@ -59,10 +61,12 @@ const Home = () => {
                     setCurrentStage={setCurrentStage}
                 />
                 <Character
-                    position={[0,0.2,-1]}
-                    scale={[0.1,0.1,0.1]}
+                    position={planePosition}
+                    scale={[0.13,0.13,0.13]}
+
                 />
-                <Balloon 
+                <Balloon
+                    isRotating={isRotating}
                     position={planePosition}
                     scale={planeScale}
                 />
