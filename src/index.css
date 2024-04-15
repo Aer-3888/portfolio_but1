@@ -60,7 +60,7 @@ body:has(.card[data-color="green"]:hover) {
 	/* Styles for the big info box */
 	.info-box.big {
 		width: 400px;   /* Adjust width for big size */
-		height: 500px;  /* Adjust height for big size */
+		height: 50vh;  /* Adjust height for big size */
 	}
 
 	.neo-btn {

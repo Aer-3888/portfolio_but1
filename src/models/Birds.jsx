@@ -5,9 +5,11 @@ const Birds = () => {
     const birdRef = useRef()
     const {scene, animations } = useGLTF(birdScene);
     const { actions} = useAnimations(animations,birdRef)
-    
+    useEffect(() => {
+        actions['Take 001'].play();
+    })
     return (
-        <mesh scale={[0.01,0.01,0.01]} position={[-2,1,-3]} rotation={[0,-1.3,0]}>
+        <mesh ref={birdRef} scale={[0.01,0.01,0.01]} position={[-3,1,-3]} rotation={[0,1,0]}>
             <primitive object={scene}/>
         </mesh>
     )

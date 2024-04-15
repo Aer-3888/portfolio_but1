@@ -6,6 +6,7 @@ import { Sky } from '@react-three/drei';
 import Character from '../models/Character';
 import Balloon from '../models/Balloon';
 import HomeInfo from '../components/HomeInfo';
+import PeachyBalloon from '../models/PeachyBalloon'
  
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
                 <directionalLight position={[5,1,1]} intensity={2}/>
                 <ambientLight intensity={0.5} />
                 <hemisphereLight skyColor="#b1e1ff" groudColor="#000000" intensity={1}/>
-                
+                <PeachyBalloon />
                 <Sky />
                 <Island
                     isRotating={isRotating}
