@@ -1,6 +1,4 @@
 import Home from './Home';
-import Contact from './Contact';
-import Projet from './Projet';
-import Apropos from './Apropos';
+import AboutMe from './AboutMe'
 
-export { Home, Apropos, Contact, Projet};
+export { Home, AboutMe};
