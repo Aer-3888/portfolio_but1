@@ -2,11 +2,12 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { projects } from '../components/MapConst';
 import { arrow } from "../assets/icons";
-
+import Footer from '../components/Footer'
 const AboutMe = () => {
 
   return (
-    <section className='max-container'>
+    <section>
+      <div className='max-container'>
       <div className='head-text'>
         A propos de moi
       </div>
@@ -92,7 +93,8 @@ const AboutMe = () => {
       </div>
 
       </div>
-      
+      </div>
+      <Footer />
     </section>
   )
 }
