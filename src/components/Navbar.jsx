@@ -8,10 +8,10 @@ const Navbar = () => {
         </NavLink>
         <nav className='flex text-lg gap-7 font-medium'>
         <NavLink to='/AboutMe' className={({ isActive }) => isActive ? "text-blue-600" : "text-black" }>
-          About
+          A propos
         </NavLink>
         <a href='../AboutMe#project' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
-          Projects
+          Mes projets
         </a>
       </nav>
     </header>
