@@ -1,7 +1,7 @@
-import { Canvas } from '@react-three/fiber'
-import React, { Suspense } from 'react'
-import Laptop from '../models/Laptop'
-import Loader from '../components/Loader';
+import React from 'react'
+import { Link } from "react-router-dom";
+import { projects } from '../components/MapConst';
+import { arrow } from "../assets/icons";
 
 const AboutMe = () => {
   return (
@@ -19,13 +19,13 @@ const AboutMe = () => {
         <span  className='head-text'>Compétences</span>
         <div className='flex'>
           <div className='w-1/2 m-1'>
-            <div >Python</div>
+            <div className='m-1'>Python</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-3/4 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
           <div className='w-1/2 m-1'>
-            <div >Kotlin/Java</div>
+            <div className='m-1'>Kotlin/Java</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-4/6 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
@@ -33,13 +33,13 @@ const AboutMe = () => {
         </div>
         <div className='flex'>
           <div className='w-1/2 m-1'>
-            <div >Html/Css</div>
+            <div className='m-1'>Html/Css</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-3/5 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
           <div className='w-1/2 m-1'>
-            <div >JavaScript</div>
+            <div className='m-1'>JavaScript</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-1/2 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
@@ -47,14 +47,42 @@ const AboutMe = () => {
         </div>
         <div className='flex'>
           <div className='w-1/2 m-1'>
-            <div >Golang</div>
+            <div className='m-1'>Golang</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-3/4 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
         </div>
         <span className='head-text w-full' id='project'>Mes projets</span>
-        
+        <div className='flex flex-wrap my-20 gap-16'>
+        {projects.map((project) => (
+          <div className='lg:w-[400px] w-full' key={project.name}>
+            <img className='rounded '  key={project.image}/>
+
+            <div className='mt-5 flex flex-col'>
+              <h4 className='text-2xl font-poppins font-semibold'>
+                {project.name}
+              </h4>
+              <p className='mt-2 text-slate-500'>{project.description}</p>
+              <div className='mt-5 flex items-center gap-2 font-poppins'>
+                <Link
+                  to={project.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='font-semibold text-blue-600'
+                >
+                  Lien vers projet
+                </Link>
+                <img
+                  src={arrow}
+                  alt='arrow'
+                  className='w-4 h-4 object-contain'
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
       </div>
       

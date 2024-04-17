@@ -15,7 +15,7 @@ const HomeInfo = ({ currentStage, canvasExpansion }) => {
         1: (
             <div className='info-box'>
                 <p className='font-medium sm:text-xl text-center'>
-                    Vous trouverez ci-dessous mon CV pour en savoir plus sur mon parcours professionnel et mes compétences
+                    Je suis un étudiant en première année d&#8217;un BUT en Informatique.Vous trouverez ci-dessous mon CV.
                 </p>
                 <a href='../assets/CV_PHAN_Theo.pdf' download="CV_PHAN_Theo.pdf" className='neo-brutalism-white neo-btn'>
                     Mon CV
@@ -44,15 +44,11 @@ const HomeInfo = ({ currentStage, canvasExpansion }) => {
             </div>
         ),
         4: (
-            <div className={`info-box ${infoBoxSize}`}>
-                <p className='font-medium sm:text-xl text-center w-full' style={{paddingBottom: 20}}>Bonjour, je m&#8217;appelle <span className='font-semibold'>Theo</span></p>
-                <p className={`${infoBoxSize === 'small' ? 'opacity-0 pointer-events-none' : 'opacity-100'} text-center transition-opacity duration-300 text-align-justify`}>
-                Je suis étudiant en première année de BUT Informatique à l'IUT de Nantes. Passionné par la programmation, je vise une école d'ingénieur après ma deuxième année pour approfondir mes compétences. Je m'intéresse particulièrement au développement logiciel, à la cybersécurité et à l'intelligence artificielle.
-                </p>
-                <button className='neo-btn neo-brutalism-white' onClick={() => toggleInfoBoxSize()}>
-                    {infoBoxSize === 'small' ? 'Voir plus' : 'Voir moins'}
-                </button> 
-            </div>
+            
+                <p className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5' >Bonjour, je m&#8217;appelle <span className='font-semibold'>Theo</span></p>
+                
+                
+            
         ),
         5: <img src={drag} />
     };
