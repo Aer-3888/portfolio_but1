@@ -4,6 +4,7 @@ import { projects } from '../components/MapConst';
 import { arrow } from "../assets/icons";
 
 const AboutMe = () => {
+
   return (
     <section className='max-container'>
       <div className='head-text'>
@@ -17,39 +18,45 @@ const AboutMe = () => {
       </div>
       <div>
         <span  className='head-text'>Compétences</span>
-        <div className='flex'>
-          <div className='w-1/2 m-1'>
+        <div className='flex flex-wrap'>
+          <div className='m-1' style={{width: '400px'}}>
             <div className='m-1'>Python</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-3/4 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
-          <div className='w-1/2 m-1'>
+          <div className='m-1' style={{width: '400px'}}>
             <div className='m-1'>Kotlin/Java</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-4/6 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
         </div>
-        <div className='flex'>
-          <div className='w-1/2 m-1'>
+        <div className='flex flex-wrap'>
+          <div className='m-1' style={{width: '400px'}}>
             <div className='m-1'>Html/Css</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-3/5 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
-          <div className='w-1/2 m-1'>
+          <div className='m-1' style={{width: '400px'}}>
             <div className='m-1'>JavaScript</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
               <div className='w-1/2 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
         </div>
-        <div className='flex'>
-          <div className='w-1/2 m-1'>
+        <div className='flex flex-wrap'>
+          <div className='m-1' style={{width: '400px'}}>
             <div className='m-1'>Golang</div>
             <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
-              <div className='w-3/4 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
+              <div className='w-3/5 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
+            </div>
+          </div>
+          <div className='m-1' style={{width: '400px'}}>
+            <div className='m-1'>SQL</div>
+            <div className='h-6 w-3/5' style={{borderColor: 'black', borderWidth : 1, borderRadius : 7}}>
+              <div className='w-3/5 h-4 m-1 rounded' style={{backgroundColor : 'black'}}></div>
             </div>
           </div>
         </div>
@@ -57,7 +64,7 @@ const AboutMe = () => {
         <div className='flex flex-wrap my-20 gap-16'>
         {projects.map((project) => (
           <div className='lg:w-[400px] w-full' key={project.name}>
-            <img className='rounded '  key={project.image}/>
+            <img className='rounded '  src={project.image}/>
 
             <div className='mt-5 flex flex-col'>
               <h4 className='text-2xl font-poppins font-semibold'>
