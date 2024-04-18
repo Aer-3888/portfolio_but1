@@ -1,4 +1,3 @@
-import { getImageUrl } from "../utils/helper";
 
 export const projects = [
     {
