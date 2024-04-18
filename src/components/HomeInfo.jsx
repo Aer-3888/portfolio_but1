@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import download from '../assets/icons/download.svg';
 import drag from '../assets/animated/drag_left.gif';
 import {getPDFUrl} from '../utils/helper' 
 
-const HomeInfo = ({ currentStage, canvasExpansion }) => {
-    const [infoBoxSize, setInfoBoxSize] = useState('small');
-
-    const toggleInfoBoxSize = () => {
-        setInfoBoxSize(prevSize => prevSize === 'small' ? 'big' : 'small');
-    };
-
+const HomeInfo = ({ currentStage}) => {
+    
     const renderContent = {
         1: (
             <div className='info-box'>
