@@ -10,9 +10,7 @@ const Navbar = () => {
         <NavLink to='/AboutMe' className={({ isActive }) => isActive ? "text-blue-600" : "text-black" }>
           A propos
         </NavLink>
-        <a href='../AboutMe#project' className={({ isActive }) => isActive ? "text-blue-600" : "text-black"}>
-          Mes projets
-        </a>
+        
       </nav>
     </header>
   )
