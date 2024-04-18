@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
 import download from '../assets/icons/download.svg';
 import drag from '../assets/animated/drag_left.gif';
-import {getPDFUrl} from '../utils/helper' 
+
 
 const HomeInfo = ({ currentStage}) => {
     
@@ -23,7 +23,7 @@ const HomeInfo = ({ currentStage}) => {
                 <p className='font-medium sm:text-xl text-center'>
                 Et ci-dessous, vous trouverez ma lettre de motivation, où je partage mon enthousiasme, mes compétences et ma passion pour cette opportunité.
                 </p>
-                <a href={getPDFUrl("Lettre_de_motivation_PHAN_Theo.pdf")} download='Lettre_de_motivation_PHAN_Theo.pdf' className='neo-brutalism-white neo-btn'>
+                <a href="Lettre_de_motivation_PHAN_Theo.pdf" download='Lettre_de_motivation_PHAN_Theo.pdf' className='neo-brutalism-white neo-btn'>
                     Ma lettre de motivation
                     <img src={download} alt='download' className='w-4 h-4 object-contain'/>
                 </a>
