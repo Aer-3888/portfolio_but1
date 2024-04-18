@@ -13,7 +13,7 @@ const HomeInfo = ({ currentStage}) => {
                 <p className='font-medium sm:text-xl text-center'>
                     Je suis un étudiant en première année d&#8217;un BUT en Informatique.Vous trouverez ci-dessous mon CV.
                 </p>
-                <a href={getPDFUrl("CV_PHAN_Theo.pdf")} download={'CV_PHAN_Theo.pdf'} className='neo-brutalism-white neo-btn'>
+                <a href="CV_PHAN_Theo.pdf" download={'CV_PHAN_Theo.pdf'} className='neo-brutalism-white neo-btn'>
                     Mon CV
                     <img src={download} alt='download' className='w-4 h-4 object-contain' />
                 </a>
