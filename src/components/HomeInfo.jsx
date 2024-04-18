@@ -31,10 +31,10 @@ const HomeInfo = ({ currentStage}) => {
         3: (
             <div className='info-box'>
                 <p className='font-medium sm:text-xl text-center'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet eum dignissimos cumque inventore assumenda animi ullam a asperiores eligendi quibusdam est dolore excepturi autem maiores illum, perspiciatis, voluptate fugit! Vitae.
+                Explorez davantage à mon sujet en cliquant ci-dessous.
                 </p>
                 <Link to='/AboutMe' className='neo-brutalism-white neo-btn'>
-                    Apprendre plus sur moi
+                En savoir plus sur moi
                     <img src={arrow} alt='arrow' className='w-4 h-4 object-contain' />
                 </Link>
             </div>
